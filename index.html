@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="./assets/css/style.css">
     <title>Find Your Essence</title>
 </head>
+
 <body>
 
     <div id="outer-container">
@@ -25,25 +27,47 @@
                 <h1 class="essence-header">Find Your Essence</h1>
             </header>
 
-            <section id="question-1" class="questions">
-                <h2>I'M SEARCHING FOR:</h2>
+            <section id="searching-for" class="questions-container">
+
+                <h2 class="question-header">I'M SEARCHING FOR:</h2>
                 <div class="choices">
-                    <a href="">
-                        <button class="choice-button">Myself</button>
+                    <button class="choice-button">Myself</button>
+                    <p class="choice-separator">OR</p>
+                    <button class="choice-button">A Friend</button>
+                </div>
+
+                <div id="prev-next" class="choices">
+                    <a href="http://www.cshashonalife.com/find-your-essence">
+                        <button class="previous-button">Prev</button>
                     </a>
-                    <p>OR</p>
-                    <a href="">
-                        <button class="choice-button">A Friend</button>
-                    </a>
+                    <span class="choice-separator"></span>
+                    <button class="previous-button">Next</button>
                 </div>
 
             </section>
-    
-        </div>
-    </div>
-    
+
+            <section id="your-essence" class="questions-container">
+
+                <h2 class="question-header">PLEASE, ENTER YOUR NAME:</h2>
+                <form id="name-form" action="">
+                    <input type="text" id="first-name" placeholder="First Name">
+                    <input type="text" id="last-name" placeholder="Last Name">
+                </form>
+
+                <div id="prev-next" class="choices">
+                    <button class="previous-button">Prev</button>
+                    <span class="choice-separator"></span>
+                    <button class="previous-button">Next</button>
+                </div>
+
+            </section>
+
+
+        </section>
+    </section>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src="./assets/js/materialize.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
