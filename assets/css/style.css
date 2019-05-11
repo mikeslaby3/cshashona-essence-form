@@ -1,0 +1,58 @@
+/* =================== */
+/* Body & Containers */
+/* =================== */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#outer-container {
+    background-color: grey;
+    height: 100%;
+    position: relative;
+}
+
+.inner-container {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+}
+
+/* =================== */
+/* Header */
+/* =================== */
+
+.essence-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.totem {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.essence-header {
+    font-size: 50px;
+    text-align: center;
+}
+
+/* =================== */
+/* Questions */
+/* =================== */
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
