@@ -27,13 +27,15 @@
                 <h1 class="essence-header">Find Your Essence</h1>
             </header>
 
+            <!-- SEARCHING FOR MYSELF OR FRIEND -->
+
             <section id="searching-for" class="questions-container">
 
                 <h2 class="question-header">I'M SEARCHING FOR:</h2>
                 <div class="choices">
-                    <button class="choice-button">Myself</button>
+                    <button id="myself-button" class="choice-button">Myself</button>
                     <p class="choice-separator">OR</p>
-                    <button class="choice-button">A Friend</button>
+                    <button id="friend-button" class="choice-button">A Friend</button>
                 </div>
 
                 <div id="prev-next" class="choices">
@@ -41,10 +43,11 @@
                         <button class="previous-button">Prev</button>
                     </a>
                     <span class="choice-separator"></span>
-                    <button class="previous-button">Next</button>
                 </div>
 
             </section>
+
+            <!-- ENTER YOUR NAME FORM -->
 
             <section id="your-essence" class="questions-container">
 
@@ -55,19 +58,38 @@
                 </form>
 
                 <div id="prev-next" class="choices">
-                    <button class="previous-button">Prev</button>
+                    <button id="prev-searching" class="previous-button">Prev</button>
                     <span class="choice-separator"></span>
-                    <button class="previous-button">Next</button>
+                    <button id="next-is-gender" class="previous-button">Next</button>
+                </div>
+
+            </section>
+
+            <!-- ENTER YOUR GENDER -->
+
+            <section id="your-gender" class="questions-container">
+
+                <h2 class="question-header">PLEASE SELECT YOUR GENDER</h2>
+                <div class="choices">
+                    <button id="myself-button" class="choice-button">Male</button>
+                    <p class="choice-separator">OR</p>
+                    <button id="friend-button" class="choice-button">Female</button>
+                </div>
+
+                <div id="prev-next" class="choices">
+                    <button id="prev-name" class="previous-button">Prev</button>
+                    <span class="choice-separator"></span>
+                    <button id="next-is-birthday" class="previous-button">Next</button>
                 </div>
 
             </section>
 
 
-        </section>
-    </section>
+            </section>
+            </section>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src="./assets/js/script.js"></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+            <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
