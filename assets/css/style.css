@@ -2,9 +2,17 @@
 /* Body & Containers */
 /* =================== */
 
+@font-face {
+    font-family: 'Brandon Grotesque Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Brandon Grotesque Light'), url('brandon-grotesque-light-58a8a4b38001d.woff') format('woff');
+}
+
 html, body {
     height: 100%;
     margin: 0;
+    font-family: Brandon Grotesque Light;
 }
 
 #outer-container {
@@ -51,8 +59,84 @@ html, body {
 /* Questions */
 /* =================== */
 
-.choices {
+.questions-container {
+    margin-top: 125px;
+    background-color: red;
+}
+
+.question-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.choice-separator {
+    margin: 0 15px;
+}
+
+.choice-button {
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    width: 125px;
+    height: 35px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-family: Brandon Grotesque Light;
+    font-size: 15px;
+}
+
+.choice-button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.previous-button {
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    background-color: white;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-family: Brandon Grotesque Light;
+    font-size: 13px;
+}
+
+.previous-button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.center {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: blue;
 }
+
+.page-control {
+    margin-top: 125px;
+}
+
+/* =================== */
+/* Name Form */
+/* =================== */
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#name-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* =================== */
+/* Birthday Form */
+/* =================== */
