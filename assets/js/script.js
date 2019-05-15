@@ -28,6 +28,15 @@ $(document).ready(function () {
     setVisibility($('#your-birthday'), HIDE);
 
     changeQuestions('#myself-button', '#searching-for', '#your-essence');
+    
+    changeQuestions('#prev-searching', '#your-essence', '#searching-for');
+    changeQuestions('#next-is-gender', '#your-essence', '#your-gender');
+    
+    changeQuestions('#prev-name', '#your-gender', '#searching-for');
+    changeQuestions('.gender-button', '#your-gender', '#your-birthday');
+    
+    changeQuestions('#prev-gender', '#your-birthday', '#your-gender');
+    changeQuestions('#next-is-reveal', '#your-birthday', '#reveal-essence');
 
     // Converting into a date object allows for date comparison  
     function EssenceMap(startDate, endDate, essence) {
