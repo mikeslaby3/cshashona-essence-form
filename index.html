@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="text/css" rel="stylesheet" href="./assets/css/reset.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/animate.css">
     <title>Find Your Essence</title>
 </head>
 
@@ -32,13 +33,13 @@
             <section id="searching-for" class="questions-container">
 
                 <h2 class="question-header">I'M SEARCHING FOR:</h2>
-                <div class="choices">
+                <div class="center">
                     <button id="myself-button" class="choice-button whose-essence">Myself</button>
                     <p class="choice-separator">OR</p>
                     <button id="friend-button" class="choice-button whose-essence">A Friend</button>
                 </div>
 
-                <div class="choices page-control">
+                <div class="center page-control">
                     <a href="http://www.cshashonalife.com/find-your-essence">
                         <button class="previous-button">Prev</button>
                     </a>
@@ -50,13 +51,16 @@
 
             <section id="your-essence" class="questions-container">
 
-                <h2 id="name-header" class="question-header"></h2>
-                <form id="name-form" action="">
-                    <input type="text" id="first-name" placeholder="First Name">
-                    <input type="text" id="last-name" placeholder="Last Name">
-                </form>
+                <h2 id="name-header" class="question-header">PLEASE, ENTER YOUR NAME</h2><br>
+                
+                <div class="form-container">
+                    <form id="name-form" action="">
+                        <input type="text" class="name-input" id="first-name" placeholder="First Name">
+                        <input type="text" class="name-input" id="last-name" placeholder="Last Name">
+                    </form>
+                </div>
 
-                <div class="choices page-control">
+                <div class="center page-control">
                     <button id="prev-searching" class="previous-button">Prev</button>
                     <span class="choice-separator"></span>
                     <button id="next-is-gender" class="previous-button">Next</button>
@@ -69,13 +73,13 @@
             <section id="your-gender" class="questions-container">
 
                 <h2 id="gender-header" class="question-header">PLEASE SELECT YOUR GENDER</h2>
-                <div class="choices">
+                <div class="center">
                     <button class="choice-button gender-button">Male</button>
                     <p class="choice-separator">OR</p>
                     <button class="choice-button gender-button">Female</button>
                 </div>
 
-                <div class="choices page-control">
+                <div class="center page-control">
                     <button id="prev-name" class="previous-button">Prev</button>
                 </div>
 
@@ -86,7 +90,7 @@
             <section id="your-birthday" class="questions-container">
 
                 <h2 id="birthday-header" class="question-header">PLEASE, ENTER YOUR BIRTHDAY:</h2>
-                <form id="birthday-form" action="">
+                <form id="birthday-form" class="center" action="">
                     <select name="month" id="month-input">
                         <option value="" disabled selected>Month</option>
                         <option value="jan">January</option>
@@ -138,8 +142,8 @@
                     </select>
                     <input type="text" id="year-input" placeholder="Year">
                 </form>
-
-                <div class="choices page-control">
+                
+                <div class="center page-control">
                     <button id="prev-gender" class="previous-button">Prev</button>
                     <span class="choice-separator"></span>
                     <button id="next-is-reveal" class="previous-button">Next</button>
@@ -152,16 +156,14 @@
             <section id="reveal-essence" class="questions-container">
 
                 <h2 id="gender-header" class="question-header">CLICK BELOW TO REVEAL YOUR ESSENCE</h2>
-                <button id="essence-button">Essence Generator</button>
+                <div class="center">
+                    <button id="essence-button">Essence Generator</button>
+                </div>
 
-                <div class="choices page-control">
+                <div class="center page-control">
                     <button id="prev-birthday" class="previous-button">Prev</button>
                 </div>
 
-            </section>
-
-
-            </section>
             </section>
 
             <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
