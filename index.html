@@ -33,16 +33,15 @@
 
                 <h2 class="question-header">I'M SEARCHING FOR:</h2>
                 <div class="choices">
-                    <button id="myself-button" class="choice-button">Myself</button>
+                    <button id="myself-button" class="choice-button whose-essence">Myself</button>
                     <p class="choice-separator">OR</p>
-                    <button id="friend-button" class="choice-button">A Friend</button>
+                    <button id="friend-button" class="choice-button whose-essence">A Friend</button>
                 </div>
 
-                <div id="prev-next" class="choices">
+                <div class="choices page-control">
                     <a href="http://www.cshashonalife.com/find-your-essence">
                         <button class="previous-button">Prev</button>
                     </a>
-                    <span class="choice-separator"></span>
                 </div>
 
             </section>
@@ -51,13 +50,13 @@
 
             <section id="your-essence" class="questions-container">
 
-                <h2 class="question-header">PLEASE, ENTER YOUR NAME:</h2>
+                <h2 id="name-header" class="question-header"></h2>
                 <form id="name-form" action="">
                     <input type="text" id="first-name" placeholder="First Name">
                     <input type="text" id="last-name" placeholder="Last Name">
                 </form>
 
-                <div id="prev-next" class="choices">
+                <div class="choices page-control">
                     <button id="prev-searching" class="previous-button">Prev</button>
                     <span class="choice-separator"></span>
                     <button id="next-is-gender" class="previous-button">Next</button>
@@ -69,17 +68,15 @@
 
             <section id="your-gender" class="questions-container">
 
-                <h2 class="question-header">PLEASE SELECT YOUR GENDER</h2>
+                <h2 id="gender-header" class="question-header">PLEASE SELECT YOUR GENDER</h2>
                 <div class="choices">
-                    <button id="myself-button" class="choice-button">Male</button>
+                    <button class="choice-button gender-button">Male</button>
                     <p class="choice-separator">OR</p>
-                    <button id="friend-button" class="choice-button">Female</button>
+                    <button class="choice-button gender-button">Female</button>
                 </div>
 
-                <div id="prev-next" class="choices">
+                <div class="choices page-control">
                     <button id="prev-name" class="previous-button">Prev</button>
-                    <span class="choice-separator"></span>
-                    <button id="next-is-birthday" class="previous-button">Next</button>
                 </div>
 
             </section>
@@ -88,64 +85,77 @@
 
             <section id="your-birthday" class="questions-container">
 
-                <h2 class="question-header">PLEASE, ENTER YOUR BIRTHDAY:</h2>
+                <h2 id="birthday-header" class="question-header">PLEASE, ENTER YOUR BIRTHDAY:</h2>
                 <form id="birthday-form" action="">
                     <select name="month" id="month-input">
-                      <option value="" disabled selected>Month</option>
-                      <option value="jan">January</option>
-                      <option value="feb">February</option>
-                      <option value="mar">March</option>
-                      <option value="apr">April</option>
-                      <option value="may">May</option>
-                      <option value="jun">June</option>
-                      <option value="jul">July</option>
-                      <option value="aug">August</option>
-                      <option value="sep">September</option>
-                      <option value="oct">October</option>
-                      <option value="nov">November</option>
-                      <option value="dec">December</option>
+                        <option value="" disabled selected>Month</option>
+                        <option value="jan">January</option>
+                        <option value="feb">February</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">August</option>
+                        <option value="sep">September</option>
+                        <option value="oct">October</option>
+                        <option value="nov">November</option>
+                        <option value="dec">December</option>
                     </select>
                     <select name="day" id="day-input">
-                      <option value="" disabled selected>Day</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                      <option value="24">24</option>
-                      <option value="25">25</option>
-                      <option value="26">26</option>
-                      <option value="27">27</option>
-                      <option value="28">28</option>
-                      <option value="29">29</option>
-                      <option value="30">30</option>
-                      <option value="31">31</option>
+                        <option value="" disabled selected>Day</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
                     </select>
                     <input type="text" id="year-input" placeholder="Year">
-                  </form>
+                </form>
 
-                <div id="prev-next" class="choices">
-                    <button id="prev-searching" class="previous-button">Prev</button>
+                <div class="choices page-control">
+                    <button id="prev-gender" class="previous-button">Prev</button>
                     <span class="choice-separator"></span>
-                    <button id="next-is-gender" class="previous-button">Next</button>
+                    <button id="next-is-reveal" class="previous-button">Next</button>
+                </div>
+
+            </section>
+
+            <!-- REVEAL ESSENCE -->
+
+            <section id="reveal-essence" class="questions-container">
+
+                <h2 id="gender-header" class="question-header">CLICK BELOW TO REVEAL YOUR ESSENCE</h2>
+                <button id="essence-button">Essence Generator</button>
+
+                <div class="choices page-control">
+                    <button id="prev-birthday" class="previous-button">Prev</button>
                 </div>
 
             </section>
