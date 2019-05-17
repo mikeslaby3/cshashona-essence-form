@@ -1,21 +1,33 @@
 const HIDE = true;
 const SHOW = false;
+let isMyEssence;
 
 function setVisibility(id, hide) {
     if (hide === true) {
         $(id).hide();
     } else {
-        $(id).show();
+        $(id).show().addClass('animated fadeIn slower').one('webkitAnimationEnd', function(){
+            $(this).removeClass('animated fadeIn slower');
+        });
     }
 }
 
+function formatHeader(buttonClicked) {
+    $('#name-header').text('PLEASE, ENTER YOUR NAME:');
+    $('#gender-header').text("PLEASE " + name + ", ENTER YOUR GENDER:");
+    $('#birthday-header').text("PLEASE " + name + ", ENTER YOUR BIRTHDAY:");
+
+    $('#name-header').text("PLEASE, ENTER YOUR FRIEND'/S NAME:");
+    $('#gender-header').text("PLEASE, ENTER " + friendName + "'/s GENDER:");
+    $('#birthday-header').text("PLEASE, ENTER " + friendName + "'/s BIRTHDAY:");
+}
+
+// function myEssenceOrMyFriends(buttonClicked) {
+
+// }
+
 function changeQuestions(buttonClicked, currentScreen, nextScreen) {
     $(document).on('click', buttonClicked, function () {
-        let isMyEssence = true;
-        if (buttonClicked === $('#friend-button')) {
-            isMyEssence = false;
-        }
-        console.log(isMyEssence);
         setVisibility(currentScreen, HIDE);
         setVisibility(nextScreen, SHOW);
     }); 
@@ -172,7 +184,14 @@ $(document).ready(function () {
             }
         } 
         
-        return essence;
+        function createEssenceUrl(essence) {
+            let essenceURL = 'https://www.cshashonalife.com/' + essence;
+            $(document).on('click', '#essence-button', function () {
+                window.open(essenceURL, '_blank');
+            }); 
+        }
+
+        createEssenceUrl(essence);
     }
 
     getEssence();
