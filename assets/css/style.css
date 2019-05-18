@@ -61,7 +61,6 @@ html, body {
 
 .questions-container {
     margin-top: 125px;
-    background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,6 +139,10 @@ input[type=text]:focus {
 .name-input {
     margin-bottom: 10px;
     width: 250px;
+}
+
+#name-form-container {
+    
 }
 
 #name-form {
