@@ -1,7 +1,10 @@
 const HIDE = true;
 const SHOW = false;
+const MONTH = $('#month-input').val();
+const DAY = $('#day-input').val();
+const YEAR = $('#year-input').val();
+let firstName = $('#first-name').val().trim().toUpperCase();
 let isMyEssence;
-let firstName;
 let essence = 'fire-essence';
 let essenceURL;
 
@@ -96,11 +99,6 @@ let dateArray = [
 ]
 
 function getEssence() {
-    const MONTH = $('#month-input').val();
-    const DAY = $('#day-input').val();
-    const YEAR = $('#year-input').val();
-    console.log('Month: ' + MONTH + ' Day: ' + DAY + ' Year: ' + YEAR);
-
     switch (MONTH) {
         case 'jan':
             m = 1;
@@ -149,7 +147,6 @@ function getEssence() {
             essence = dateArray[i].essence
         }
     }
-
 }
 
 function createEssenceUrl(essence) {
@@ -187,6 +184,15 @@ function changeQuestions(buttonClicked, currentScreen, nextScreen) {
         }
     });
 }
+
+// function enterValidInfo(buttonClicked, message, messageDiv) {
+//     $(document).on('click', buttonClicked, function () {
+//         $(messageDiv).text(message);
+//         console.log(buttonClicked);
+//         console.log(message);
+//         console.log(messageDiv);
+//     });
+// }
 
 $(document).ready(function () {
 
