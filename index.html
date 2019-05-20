@@ -53,7 +53,8 @@
 
                 <h2 id="name-header" class="question-header"></h2><br>
                 
-                <div class="form-container">
+                <div id="name-form-container" class="center">
+                    <span id="type-valid-name"></span>
                     <form id="name-form" target="_self" action="">
                         First Name:
                         <input type="text" class="name-input" id="first-name">
@@ -62,7 +63,7 @@
                     </form>
                 </div>
 
-                <div class="center page-control">
+                <div class="center" id="name-page-control">
                     <button id="prev-searching" class="previous-button">Prev</button>
                     <span class="choice-separator"></span>
                     <button id="next-is-gender" class="previous-button">Next</button>
@@ -159,7 +160,7 @@
 
                 <h2 id="gender-header" class="question-header">CLICK BELOW TO REVEAL YOUR ESSENCE</h2>
                 <div class="center">
-                    <button id="essence-button">Essence Generator</button>
+                    <button class="choice-button" id="essence-button">Essence Generator</button>
                 </div>
 
                 <div class="center page-control">
