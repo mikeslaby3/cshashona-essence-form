@@ -141,8 +141,8 @@ input[type=text]:focus {
     width: 250px;
 }
 
-#name-form-container {
-    
+#type-valid-name {
+    color: red;
 }
 
 #name-form {
@@ -151,6 +151,18 @@ input[type=text]:focus {
     justify-content: center;
 }
 
+#name-page-control {
+    margin-top: 20px;
+}
+
 /* =================== */
 /* Birthday Form */
 /* =================== */
+
+/* =================== */
+/* Reveal Essence */
+/* =================== */
+
+#essence-button {
+    width: 180px;
+}
