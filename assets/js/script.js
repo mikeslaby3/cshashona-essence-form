@@ -28,6 +28,16 @@ function formatHeader(firstName) {
     }
 }
 
+function listYears() {
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear() + 1;
+    
+    for (let i = 0; i < 100; i++) {
+        let year = currentYear -= 1
+        $('#year-input').append('<option value="' + year + '">' + year + '</option>');
+    }
+}
+
 // Converting into a date object allows for date comparison  
 function EssenceMap(startDate, endDate, essence) {
     this.startDate = new Date(startDate);
@@ -195,7 +205,8 @@ function changeQuestions(buttonClicked, currentScreen, nextScreen) {
 // }
 
 $(document).ready(function () {
-
+    
+    listYears();
     setVisibility($('#name-section'), HIDE);
     setVisibility($('#gender-section'), HIDE);
     setVisibility($('#birthday-section'), HIDE);
