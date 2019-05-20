@@ -1,8 +1,5 @@
 const HIDE = true;
 const SHOW = false;
-const MONTH = $('#month-input').val();
-const DAY = $('#day-input').val();
-const YEAR = $('#year-input').val();
 let firstName = $('#first-name').val().trim().toUpperCase();
 let isMyEssence;
 let essence = 'fire-essence';
@@ -31,7 +28,7 @@ function formatHeader(firstName) {
 function listYears() {
     let currentDate = new Date();
     let currentYear = currentDate.getFullYear() + 1;
-    
+
     for (let i = 0; i < 100; i++) {
         let year = currentYear -= 1
         $('#year-input').append('<option value="' + year + '">' + year + '</option>');
@@ -109,6 +106,9 @@ let dateArray = [
 ]
 
 function getEssence() {
+    const MONTH = $('#month-input').val();
+    const DAY = $('#day-input').val();
+    const YEAR = $('#year-input').val();
     switch (MONTH) {
         case 'jan':
             m = 1;
@@ -205,7 +205,7 @@ function changeQuestions(buttonClicked, currentScreen, nextScreen) {
 // }
 
 $(document).ready(function () {
-    
+
     listYears();
     setVisibility($('#name-section'), HIDE);
     setVisibility($('#gender-section'), HIDE);
