@@ -13,10 +13,10 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: Brandon Grotesque Light;
+    background-image: url(../images/full-bloom.png);
 }
 
 #outer-container {
-    background-color: grey;
     height: 100%;
     position: relative;
 }
@@ -30,6 +30,9 @@ html, body {
     width: 500px;
     height: 515px;
     background-color: white;
+    border-style: ridge;
+    border-width: 6px;
+
 }
 
 /* =================== */
@@ -40,7 +43,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .totem {
