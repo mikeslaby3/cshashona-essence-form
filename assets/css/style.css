@@ -49,7 +49,7 @@ html, body {
 .totem {
     height: 50px;
     width: 50px;
-    margin-right: 10px;
+    margin: 0 5px;
     opacity: 0.5;
 }
 
