@@ -1,0 +1,55 @@
+@media only screen and (min-width: 1680px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .inner-container {
+        margin: -300px 0 0 -300px;
+        width: 650px;
+        height: 675px;
+    }
+
+    .essence-images {
+        margin-bottom: 30px;
+    }
+
+    .totem {
+        height: 75px;
+        width: 75px;
+        margin-right: 15px;
+    }
+
+    #main-logo {
+        margin-top: 30px;
+    }
+
+    .questions-container {
+        margin-top: 50px;
+    }
+
+    .essence-header {
+        font-size: 75px;
+    }
+
+    .question-header {
+        margin-bottom: 20px;
+    }
+
+    .choice-button {
+        width: 160px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .choice-separator {
+        margin: 13px 30px;
+    }
+
+    .previous-button {
+        height: 65px;
+        width: 65px;
+        font-size: 20px;
+    }
+
+}
