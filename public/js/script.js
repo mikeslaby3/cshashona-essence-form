@@ -207,7 +207,8 @@ function changeQuestions(buttonClicked, currentScreen, nextScreen) {
 $(document).ready(function () {
 
     listYears();
-    setVisibility($('#name-section'), HIDE);
+    setVisibility($('#for-whom-section'), HIDE);
+    setVisibility($('#name-section'), SHOW);
     setVisibility($('#gender-section'), HIDE);
     setVisibility($('#birthday-section'), HIDE);
     setVisibility($('#reveal-essence'), HIDE);

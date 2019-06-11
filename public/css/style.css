@@ -151,6 +151,7 @@ input[type=text]:focus {
 
 #type-valid-name {
     color: red;
+    margin-bottom: 10px;
 }
 
 #name-form {
