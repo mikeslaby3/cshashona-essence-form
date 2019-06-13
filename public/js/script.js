@@ -165,8 +165,13 @@ function createEssenceUrl(essence) {
 
 function changeQuestions(buttonClicked, currentScreen, nextScreen) {
     $(document).on('click', buttonClicked, function () {
-        setVisibility(currentScreen, HIDE);
-        setVisibility(nextScreen, SHOW);
+        let error = false;
+
+        if (error === false) {
+            setVisibility(currentScreen, HIDE);
+            setVisibility(nextScreen, SHOW);
+        }
+
         switch (currentScreen) {
             case '#for-whom-section':
                 if (buttonClicked === '#friend-button') {
@@ -180,8 +185,15 @@ function changeQuestions(buttonClicked, currentScreen, nextScreen) {
                 break;
             case '#name-section':
                 if (buttonClicked === '#next-is-gender') {
-                    firstName = $('#first-name').val().trim().toUpperCase();
-                    formatHeader(firstName);
+                    if ($('#first-name').val() === '') {
+                        error = true;
+                        setVisibility($('#type-valid-name'), SHOW);
+                    } else {
+                        error = false;
+                        firstName = $('#first-name').val().trim().toUpperCase();
+                        formatHeader(firstName);
+                        setVisibility($('#type-valid-name'), HIDE);
+                    }
                 }
                 break;
             case '#gender-section':
@@ -209,6 +221,7 @@ $(document).ready(function () {
     listYears();
     setVisibility($('#for-whom-section'), HIDE);
     setVisibility($('#name-section'), SHOW);
+    setVisibility($('#type-valid-name'), HIDE);
     setVisibility($('#gender-section'), HIDE);
     setVisibility($('#birthday-section'), HIDE);
     setVisibility($('#reveal-essence'), HIDE);
