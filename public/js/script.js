@@ -167,11 +167,6 @@ function changeQuestions(buttonClicked, currentScreen, nextScreen) {
     $(document).on('click', buttonClicked, function () {
         let error = false;
 
-        if (error === false) {
-            setVisibility(currentScreen, HIDE);
-            setVisibility(nextScreen, SHOW);
-        }
-
         switch (currentScreen) {
             case '#for-whom-section':
                 if (buttonClicked === '#friend-button') {
@@ -199,30 +194,38 @@ function changeQuestions(buttonClicked, currentScreen, nextScreen) {
             case '#gender-section':
                 break;
             case '#birthday-section':
-                getEssence();
-                console.log(essence);
-                createEssenceUrl(essence);
+                if (buttonClicked === '#next-is-reveal') {
+                    if ($('#month-input').val() === null ||
+                        $('#day-input').val() === null ||
+                        $('#year-input').val() === null) {
+                            error = true;
+                            setVisibility($('#enter-valid-birthday'), SHOW);
+                    } else {
+                        error = false;
+                        getEssence();
+                        createEssenceUrl(essence);
+                        setVisibility($('#enter-valid-birthday'), HIDE);
+                    }
+                }
                 break;
         }
+
+        if (error === false) {
+            setVisibility(currentScreen, HIDE);
+            setVisibility(nextScreen, SHOW);
+        }
+
     });
 }
-
-// function enterValidInfo(buttonClicked, message, messageDiv) {
-//     $(document).on('click', buttonClicked, function () {
-//         $(messageDiv).text(message);
-//         console.log(buttonClicked);
-//         console.log(message);
-//         console.log(messageDiv);
-//     });
-// }
 
 $(document).ready(function () {
 
     listYears();
-    setVisibility($('#for-whom-section'), HIDE);
-    setVisibility($('#name-section'), SHOW);
+    setVisibility($('#for-whom-section'), SHOW);
+    setVisibility($('#name-section'), HIDE);
     setVisibility($('#type-valid-name'), HIDE);
     setVisibility($('#gender-section'), HIDE);
+    setVisibility($('#enter-valid-birthday'), HIDE);
     setVisibility($('#birthday-section'), HIDE);
     setVisibility($('#reveal-essence'), HIDE);
 
