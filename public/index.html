@@ -58,11 +58,11 @@
 
                 <h2 id="name-header" class="question-header"></h2><br>
 
-                <span class="center" id="type-valid-name">Please enter your first name</span>
+                <span class="center error-message" id="type-valid-name">Please enter your first name</span>
                 
                 <div id="name-form-container" class="center">
                     <form id="name-form" target="_self" action="">
-                        First Name:
+                        First Name*:
                         <input type="text" class="name-input" id="first-name">
                         Last Name:
                         <input type="text" class="name-input" id="last-name">
@@ -99,9 +99,10 @@
             <section id="birthday-section" class="questions-container">
 
                 <h2 id="birthday-header" class="question-header">PLEASE, ENTER YOUR BIRTHDAY:</h2>
+                <span class="center error-message" id="enter-valid-birthday">Please enter your full birthday</span>
                 <form id="birthday-form" class="center" action="">
                     <select name="month" class="bday-input" id="month-input">
-                        <option value="" disabled selected>Month</option>
+                        <option value="" disabled selected>Month*</option>
                         <option value="jan">January</option>
                         <option value="feb">February</option>
                         <option value="mar">March</option>
@@ -116,7 +117,7 @@
                         <option value="dec">December</option>
                     </select>
                     <select name="day" class="bday-input" id="day-input">
-                        <option value="" disabled selected>Day</option>
+                        <option value="" disabled selected>Day*</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -150,7 +151,7 @@
                         <option value="31">31</option>
                     </select>
                     <select name="year" class="bday-input" id="year-input">
-                        <option value="" disabled selected>Year</option>
+                        <option value="" disabled selected>Year*</option>
                     </select>
                 </form>
                 
