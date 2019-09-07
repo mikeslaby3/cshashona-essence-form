@@ -25,6 +25,8 @@ function formatHeader(firstName) {
     }
 }
 
+// Dynamically generates the years for the birthday form
+// This way, we don't have to constantly update as years pass
 function listYears() {
     let currentDate = new Date();
     let currentYear = currentDate.getFullYear() + 1;
@@ -160,7 +162,7 @@ function getEssence() {
 }
 
 function createEssenceUrl(essence) {
-    essenceURL = 'https://www.cshashonalife.com/' + essence;
+    essenceURL = 'https://www.caroleshashona.com/' + essence;
 }
 
 function changeQuestions(buttonClicked, currentScreen, nextScreen) {
